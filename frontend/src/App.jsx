@@ -40,8 +40,8 @@ function App() {
   }, [isDarkMode]);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
-      <header className="p-4 flex justify-end border-b dark:border-gray-800">
+    <div className="min-h-screen">
+      <header className="p-4 flex justify-end border-b border-zinc-200 dark:border-zinc-800 transition-colors">
         <ThemeToggle />
       </header>
       <Routes>
