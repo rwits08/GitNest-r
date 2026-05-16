@@ -1,4 +1,4 @@
-```yml
+
 ---
 Name: 📖 Documentation update
 about: Suggest improvements, fixes, or additions to GitNest documentation
@@ -15,12 +15,12 @@ labels: documentation
 # Documentation Location
 <!-- Mention the file, folder, section, or page where the update is required. -->
 
-# Example:
+<!-- # Example:
 # - README.md
 # - CONTRIBUTING.md
 # - docs/setup.md
 # - API documentation
-# - Installation guide
+# - Installation guide  -->
 
 
 # Type of Documentation Update
@@ -36,5 +36,5 @@ labels: documentation
 # Additional Context
 <!-- Optional -->
 <!-- Add screenshots, references, links, or extra details if needed. -->
-```
+
 <!-- Thank you for taking the time to contribute! 🙌 -->
