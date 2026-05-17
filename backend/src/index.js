@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
+import mongoSanitize from 'express-mongo-sanitize';
 import connectDB from './config/db.js';
 import authRoutes from './routes/auth.routes.js';
 import AppError from './utils/AppError.js';
@@ -14,6 +15,7 @@ connectDB();
 
 app.use(cors());
 app.use(express.json());
+app.use(mongoSanitize());
 
 app.use('/health', healthRoute);
 app.use('/api/v1/auth', authRoutes);

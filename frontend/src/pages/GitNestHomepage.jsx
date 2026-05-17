@@ -11,6 +11,7 @@
         Star,
         ArrowRight,
     } from "lucide-react";
+    import { Link } from 'react-router-dom';
 
     export default function GitNestHomepage() {
         const features = [
@@ -93,10 +94,10 @@
                                 Documentation
                             </button>
 
-                            <button className="px-5 py-2 rounded-xl bg-emerald-400 text-black font-semibold text-sm hover:scale-[1.02] transition-all shadow-lg shadow-emerald-500/20 flex items-center gap-2">
+                            <Link to="/register" className="px-5 py-2 rounded-xl bg-emerald-400 text-black font-semibold text-sm hover:scale-[1.02] transition-all shadow-lg shadow-emerald-500/20 flex items-center gap-2">
                                 Start Contributing
                                 <ArrowRight className="w-4 h-4" />
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </header>
@@ -123,9 +124,9 @@
                             </p>
 
                             <div className="flex flex-wrap gap-4 mb-14">
-                                <button className="px-7 py-4 rounded-2xl bg-emerald-400 text-black font-semibold hover:scale-[1.02] transition-all shadow-xl shadow-emerald-500/20">
+                                <Link to="/login" className="px-7 py-4 rounded-2xl bg-emerald-400 text-black font-semibold hover:scale-[1.02] transition-all shadow-xl shadow-emerald-500/20 inline-block text-center">
                                     Explore Repositories
-                                </button>
+                                </Link>
 
                                 <button className="px-7 py-4 rounded-2xl border border-white/10 bg-white/[0.03] text-zinc-200 hover:bg-white/[0.06] transition-all">
                                     View Architecture
@@ -290,9 +291,9 @@
                                 </p>
 
                                 <div className="flex flex-wrap justify-center gap-4">
-                                    <button className="px-7 py-4 rounded-2xl bg-emerald-400 text-black font-semibold hover:scale-[1.02] transition-all shadow-xl shadow-emerald-500/20">
+                                    <Link to="/register" className="px-7 py-4 rounded-2xl bg-emerald-400 text-black font-semibold hover:scale-[1.02] transition-all shadow-xl shadow-emerald-500/20 inline-block text-center">
                                         Contribute Now
-                                    </button>
+                                    </Link>
 
                                     <button className="px-7 py-4 rounded-2xl border border-white/10 bg-white/[0.03] text-zinc-200 hover:bg-white/[0.06] transition-all">
                                         Read Contribution Guide
