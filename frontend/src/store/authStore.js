@@ -60,11 +60,12 @@ export const useAuthStore = create(
         try {
           const res = await getMe();
           set({
-            user: res.data,
+            user: { _id: res.data._id, username: res.data.username, email: res.data.email },
+            token: res.data.token,
             isAuthenticated: true,
             loading: false,
           });
-        } catch (error) {
+        } catch {
           set({
             user: null,
             token: null,
