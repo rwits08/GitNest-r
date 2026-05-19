@@ -1,5 +1,6 @@
 
-    import {
+import { useThemeStore } from '../store/useThemeStore';
+        import {
         GitBranch,
         ShieldCheck,
         Sparkles,
@@ -39,7 +40,13 @@
             { value: "GSSoC", label: "Community Driven" },
         ];
 
+        
+        const { isDarkMode, toggleTheme } = useThemeStore();
+
         return (
+
+
+            
             <div className="min-h-screen bg-white dark:bg-[#06070a] text-zinc-900 dark:text-white transition-colors overflow-hidden">
                 {/* Background Effects */}
                 <div className="absolute inset-0 -z-10">
@@ -48,9 +55,10 @@
                 </div>
 
                 {/* Navbar */}
-                <header className="sticky top-0 z-50 border-b border-zinc-200 dark:border-white/5 backdrop-blur-xl bg-white/80 dark:bg-[#06070a]/80 transition-colors">
+                <header className="fixed left-0 w-full top-0 z-50 border-b border-zinc-200 dark:border-white/5 backdrop-blur-xl bg-white/80 dark:bg-[#06070a]/80 transition-colors">
                     <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
                         <div className="flex items-center gap-3 cursor-pointer select-none">
+
                             <div className="w-11 h-11 rounded-2xl bg-zinc-100 dark:bg-white flex items-center justify-center overflow-hidden shadow-2xl shadow-emerald-500/20 border border-zinc-200 dark:border-white/10 p-1">
                                 <img
                                     src={logo}
@@ -83,9 +91,12 @@
                                 Contributors
                             </a>
                         </nav>
-
+                        <div className='flex items-center gap-3'>
+                        <button onClick={toggleTheme}className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"aria-label="Toggle Theme" >
+                        {isDarkMode ? '🌞 Light' : '🌙 Dark'}
+                        </button>
                         <div className="flex items-center gap-3">
-                            <button className="hidden sm:flex px-4 py-2 rounded-xl border border-zinc-200 dark:border-white/10 bg-zinc-50 dark:bg-white/[0.03] text-sm text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-white/[0.06] transition-all">
+                        <button className="hidden sm:flex px-4 py-2 rounded-xl border border-zinc-200 dark:border-white/10 bg-zinc-50 dark:bg-white/[0.03] text-sm text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-white/[0.06] transition-all">
                                 Documentation
                             </button>
 
@@ -93,6 +104,7 @@
                                 Start Contributing
                                 <ArrowRight className="w-4 h-4" />
                             </Link>
+                            </div>
                         </div>
                     </div>
                 </header>
@@ -408,5 +420,6 @@
                     </div>
                 </footer>
             </div>
-        );
-    }
+            
+                    );
+    };
